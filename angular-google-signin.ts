@@ -1,11 +1,9 @@
 import {Component, AfterViewInit, ChangeDetectionStrategy, Input, Output, EventEmitter} from '@angular/core';
 
-import GoogleUser = gapi.auth2.GoogleUser;
-
 export class GoogleSignInSuccess {
-  public googleUser: GoogleUser;
+  public googleUser: gapi.auth2.GoogleUser;
 
-  constructor(googleUser: GoogleUser) {
+  constructor(googleUser: gapi.auth2.GoogleUser) {
     this.googleUser = googleUser;
   }
 }
@@ -103,7 +101,7 @@ export class GoogleSignInComponent implements AfterViewInit {
     this.googleSignInFailure.next(new GoogleSignInFailure());
   }
 
-  private handleSuccess(googleUser: GoogleUser) {
+  private handleSuccess(googleUser: gapi.auth2.GoogleUser) {
     this.googleSignInSuccess.next(new GoogleSignInSuccess(googleUser));
   }
 
@@ -115,7 +113,7 @@ export class GoogleSignInComponent implements AfterViewInit {
         height: this._height,
         longtitle: this._longTitle,
         theme: this.theme,
-        onsuccess: (googleUser: GoogleUser) => this.handleSuccess(googleUser),
+        onsuccess: (googleUser: gapi.auth2.GoogleUser) => this.handleSuccess(googleUser),
         onfailure: () => this.handleFailure()
       });
   }
