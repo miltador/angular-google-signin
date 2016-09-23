@@ -1,4 +1,4 @@
-# angular-google-signin
+# angular-google-signin [![npm version](https://badge.fury.io/js/angular-google-signin.svg)](https://badge.fury.io/js/angular-google-signin)
 
 Google Sign-In component for Angular written in TypeScript.
 
