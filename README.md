@@ -84,7 +84,7 @@ For more information about Google Sign-In JavaScript client, See [https://develo
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/ntaoo/ng2_g_signin/issues
+[tracker]: https://github.com/miltador/angular-google-signin/issues
 
 ## Notes
 
