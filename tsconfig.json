@@ -7,7 +7,18 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "declaration": true,
-    "moduleResolution": "node"
+    "lib": [
+      "dom",
+      "es2015.collection",
+      "es2015.promise",
+      "es5"
+    ],
+    "moduleResolution": "node",
+    "removeComments": false,
+    "types": [
+      "gapi",
+      "gapi.auth2"
+    ]
   },
   "files": [
     "angular-google-signin.ts"
