@@ -1,0 +1,27 @@
+{
+  "name": "angular-google-signin",
+  "version": "0.1.0",
+  "description": "Google Sign-In component for Angular written in TypeScript",
+  "main": "angular-google-signin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miltador/angular-google-signin.git"
+  },
+  "keywords": [
+    "google",
+    "signin",
+    "login"
+  ],
+  "author": "Vasiliy Solovey <miltador@yandex.ua>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miltador/angular-google-signin/issues"
+  },
+  "homepage": "https://github.com/miltador/angular-google-signin#readme",
+  "devDependencies": {
+    "typescript": "^2.0.2"
+  }
+}
