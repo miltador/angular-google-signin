@@ -39,9 +39,6 @@ Example of a component that is using this package:
 import {Component} from '@angular/core';
 import {GoogleSignInSuccess} from 'angular-google-signin';
 
-import GoogleUser = gapi.auth2.GoogleUser;
-import BasicProfile = gapi.auth2.BasicProfile;
-
 @Component({
   selector: 'my-app',
   templateUrl: 'app.component.html'
@@ -53,9 +50,9 @@ export class AppComponent {
   private myClientId: string = 'your-client-id-here.apps.googleusercontent.com';
 
   onGoogleSignInSuccess(event: GoogleSignInSuccess) {
-    let googleUser: GoogleUser = event.googleUser;
+    let googleUser: gapi.auth2.GoogleUser = event.googleUser;
     let id: string = googleUser.getId();
-    let profile: BasicProfile = googleUser.getBasicProfile();
+    let profile: gapi.auth2.BasicProfile = googleUser.getBasicProfile();
     console.log('ID: ' +
       profile
         .getId()); // Do not send to your backend! Use an ID token instead.
