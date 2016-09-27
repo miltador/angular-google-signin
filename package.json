@@ -1,6 +1,6 @@
 {
   "name": "angular-google-signin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Google Sign-In component for Angular written in TypeScript",
   "main": "angular-google-signin.js",
   "typings": "./angular-google-signin.d.ts",
