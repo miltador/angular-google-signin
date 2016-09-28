@@ -12,6 +12,9 @@ jspm_packages
 # WebStorm
 .idea
 
+# VS Code
+.vscode
+
 # Compiled files
 *.js
 *.js.map

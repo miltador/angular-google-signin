@@ -7,3 +7,5 @@ Thumbs.db
 .DS_Store
 
 .editorconfig
+.idea
+.vscode
