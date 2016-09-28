@@ -84,7 +84,7 @@ export class GoogleSignInComponent implements AfterViewInit {
   private auth2Init() {
     if (this.clientId == null)
       throw new Error(
-        'clientId property is necessary. (<google-signin clientId="..."></google-signin>)');
+        'clientId property is necessary. (<google-signin [clientId]="..."></google-signin>)');
 
     gapi.load('auth2', () => {
       gapi.auth2.init({
