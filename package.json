@@ -1,13 +1,14 @@
 {
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "angular-google-signin",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "description": "Google Sign-In component for Angular written in TypeScript",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+  "author": "Vasyl Solovei <iam@miltador.pro>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/miltador/angular-google-signin/issues"
   },
+  "homepage": "https://github.com/miltador/angular-google-signin#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miltador/angular-google-signin.git"
@@ -19,21 +20,21 @@
     "gapi",
     "angular"
   ],
-  "author": "Vasiliy Solovey <miltador@yandex.ua>",
-  "license": "BSD-3-Clause",
-  "bugs": {
-    "url": "https://github.com/miltador/angular-google-signin/issues"
+  "ngPackage": {
+    "lib": {
+      "entryFile": "src/google-signin.component.ts"
+    }
   },
-  "homepage": "https://github.com/miltador/angular-google-signin#readme",
-  "devDependencies": {
-    "typescript": "^2.0.0"
-  },
-  "peerDependencies": {
-    "@angular/core": "^2.0.0",
-    "rxjs": "5.0.3",
-    "zone.js": "^0.7.2"
+  "scripts": {
+    "build": "ng-packagr -p package.json"
   },
   "dependencies": {
-    "@types/gapi.auth2": "^0.0.32"
+    "@angular/core": "^5.1.2",
+    "@types/gapi.auth2": "^0.0.46",
+    "rxjs": "^5.5.6"
+  },
+  "devDependencies": {
+    "ng-packagr": "^1.6.0",
+    "typescript": "~2.5.3"
   }
 }

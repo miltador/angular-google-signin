@@ -40,17 +40,16 @@ export class GoogleSignInComponent implements AfterViewInit {
 
   @Input() set height(value: string) {
     this._height = Number(value);
-    gapi.load('', '');
   }
 
   private _longTitle: boolean;
 
-  get longTitle(): string {
-    return this._longTitle.toString();
+  get longTitle(): boolean {
+    return this._longTitle;
   }
 
-  @Input() set longTitle(value: string) {
-    this._longTitle = Boolean(value);
+  @Input() set longTitle(value: boolean) {
+    this._longTitle = value;
   }
 
   @Input() private theme: string;
@@ -98,11 +97,11 @@ export class GoogleSignInComponent implements AfterViewInit {
   }
 
   private handleFailure() {
-    this.googleSignInFailure.next(new GoogleSignInFailure());
+    this.googleSignInFailure.emit(new GoogleSignInFailure());
   }
 
   private handleSuccess(googleUser: gapi.auth2.GoogleUser) {
-    this.googleSignInSuccess.next(new GoogleSignInSuccess(googleUser));
+    this.googleSignInSuccess.emit(new GoogleSignInSuccess(googleUser));
   }
 
   private renderButton() {

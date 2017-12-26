@@ -21,7 +21,7 @@
     ]
   },
   "files": [
-    "index.ts"
+    "src/google-signin.component.ts"
   ],
   "exclude": [
     "node_modules"
